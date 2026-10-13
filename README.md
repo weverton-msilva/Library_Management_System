@@ -34,11 +34,9 @@ src/
 └── com/
     └── biblioteca/
         ├── model/           # Classes de domínio (Livro, Usuario, Emprestimo)
-        ├── exception/       # Exceções personalizadas (LivroIndisponivelException)
         ├── repository/      # Gerenciamento dos dados na memória
         ├── service/         # Regras de negócio (Validações, empréstimos)
         └── Main.java        # Interface CLI e menu interativo no terminal
-
 ```
 
 ## ⚙️ Como Executar o Projeto
@@ -57,7 +55,7 @@ git clone [https://github.com/seu-usuario/library-management-system.git](https:/
 ```
 
 2. **Abra o projeto** na sua IDE favorita.
-3. **Localize a classe principal:** Navegue até o arquivo `src/com/biblioteca/Main.java`.
+3. **Localize a classe principal:** Navegue até o arquivo `src`.
 4. **Compile e execute:**
 * **Pela IDE:** Clique no botão de "Play" (Run) ao lado da classe `Main` ou dentro dela.
 * **Pelo Terminal:** Abra a pasta raiz do projeto no terminal e execute os comandos:
