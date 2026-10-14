@@ -12,6 +12,7 @@ public class UserModel {
     private boolean active; // Se a conta está ativa ou suspensa
 
     public UserModel() {}
+
     public UserModel(Long id, String name, String email, String cpf, String phone) {
         this.id = id;
         this.name = name;

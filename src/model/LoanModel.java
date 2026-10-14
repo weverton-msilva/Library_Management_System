@@ -12,6 +12,7 @@ public class LoanModel {
     private boolean active;       // Status do empréstimo (ativo ou finalizado)
 
     public LoanModel() {}
+
     public LoanModel(Long id, BookModel book, String userName, LocalDate loanDate, LocalDate dueDate) {
         this.id = id;
         this.book = book;

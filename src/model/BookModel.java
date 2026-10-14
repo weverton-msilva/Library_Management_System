@@ -8,6 +8,7 @@ public class BookModel {
     private int quantity;
 
     public BookModel() {}
+
     public BookModel(String title, String author, String isbn, int year, int quantity) {
         this.title = title;
         this.author = author;
