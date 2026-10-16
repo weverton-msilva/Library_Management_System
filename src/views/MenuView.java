@@ -1,14 +1,19 @@
 package src.views;
 
 import src.service.BookLoans;
+import src.service.UserServices; // Importe o UserServices
 
 import java.util.Scanner;
 
 public class MenuView {
+    // Atributos de instância (agora todos injetados)
+    private UserServices userServices = null;
     private final BookLoans bookLoans;
     private final Scanner scanner;
 
+    // Construtor recebendo todos os serviços necessários
     public MenuView(BookLoans bookLoans, Scanner scanner) {
+        this.userServices = userServices;
         this.bookLoans = bookLoans;
         this.scanner = scanner;
     }
@@ -22,9 +27,18 @@ public class MenuView {
                 int choice = displayOptions();
 
                 switch (choice) {
-                    // case 1 -> BookService.;
-                    // case 2 -> UserServices.;
-                    // case 3 -> BookLoans.;
+                    case 1 -> {
+                        // bookService.gerenciarLivros();
+                        System.out.println("Módulo de Livros em construção...");
+                    }
+                    case 2 -> {
+                        // Chamando o método através da instância injetada
+                        userServices.registerUsers();
+                    }
+                    case 3 -> {
+                        // bookLoans.gerenciarEmprestimos();
+                        System.out.println("Módulo de Empréstimos em construção...");
+                    }
                     case 4 -> {
                         System.out.println("Obrigado por usar o nosso sistema! ✌️");
                         codeRunned = false;

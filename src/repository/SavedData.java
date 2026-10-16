@@ -1,6 +1,5 @@
 package src.repository;
 
-import src.model.BookModel;
 import src.model.LoanModel;
 import src.model.UserModel;
 
@@ -9,16 +8,16 @@ import java.util.List;
 
 public class SavedData {
     // Listas privadas para proteger os dados
-    private final List<BookModel> bookModels = new ArrayList<>();
+    private final List<UserModel> bookModels = new ArrayList<UserModel>();
     private final List<LoanModel> loanModels = new ArrayList<>();
     private final List<UserModel> userModels = new ArrayList<>();
 
     // Métodos de acesso e manipulação
-    public List<BookModel> getBookModels() {
+    public List<UserModel> getBookModels() {
         return bookModels;
     }
 
-    public void addBook(BookModel book) {
+    public void addBook(UserModel book) {
         this.bookModels.add(book);
     }
 
