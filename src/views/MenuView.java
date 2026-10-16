@@ -15,21 +15,28 @@ public class MenuView {
 
     // Loop para execução do programa até sua finalização
     public void showMenu() {
-        while (true) {
-            int choice = displayOptions();
+        boolean codeRunned = true;
 
-            switch (choice) {
-                // case 1 -> BookService.;
-                // case 2 -> UserServices.;
-                // case 3 -> BookLoans.;
-                case 4 -> {
-                    System.out.println("Obrigado por usar o nosso sistema! ✌️");
-                    break;
+        while (codeRunned) {
+            try {
+                int choice = displayOptions();
+
+                switch (choice) {
+                    // case 1 -> BookService.;
+                    // case 2 -> UserServices.;
+                    // case 3 -> BookLoans.;
+                    case 4 -> {
+                        System.out.println("Obrigado por usar o nosso sistema! ✌️");
+                        codeRunned = false;
+                    }
+                    default -> {
+                        System.out.println("🤖 Ops, comando não reconhecido!");
+                        System.out.println("Essa opção não consta no meu sistema. Que tal tentar de novo?\n");
+                    }
                 }
-                default -> {
-                    System.out.println("🤖 Ops, comando não reconhecido!");
-                    System.out.println("Essa opção não consta no meu sistema. Que tal tentar de novo?\n");
-                }
+            } catch (Exception e) {
+                System.out.println("\n🤖 Ops, comando não reconhecido!");
+                scanner.nextLine();
             }
         }
     }
